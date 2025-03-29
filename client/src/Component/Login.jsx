@@ -14,7 +14,7 @@ const Login = () => {
     
     try {
       
-    const response = await fetch("http://localhost:5000/api/signUp",
+    const response = await fetch("https://insta-server-u205.onrender.com/api/signUp",
       {
         method:"POST",
         headers: {
