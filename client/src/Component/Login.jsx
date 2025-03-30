@@ -14,7 +14,7 @@ const Login = () => {
     
     try {
       
-    const response = await fetch("https://insta-server-u205.onrender.com/api/signUp",
+    const response = await fetch("https://instagram-ft4y.onrender.com/api/signUp",
       {
         method:"POST",
         headers: {
