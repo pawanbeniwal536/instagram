@@ -19,7 +19,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: red;
   }
   
   .container {
@@ -31,7 +30,7 @@
   
   .insta-logo img {
     width: 80px;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
   }
   
   .input-field {
