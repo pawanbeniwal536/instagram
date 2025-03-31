@@ -10,9 +10,10 @@ const Login = () => {
       alert("Creadential cannot be blank");
     }
     else{
-    e.preventDefault();
+      e.preventDefault();
+      
+      try {
     
-    try {
       
     const response = await fetch("https://instagram-ft4y.onrender.com/api/signUp",
       {

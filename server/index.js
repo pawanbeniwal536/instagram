@@ -9,11 +9,10 @@ connection();
 // Port number from the .env file to the help of the dotenv file. 
 dotenv.config();
 
-// Call the connection for db conection 
 
 // Middleware
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 
 
