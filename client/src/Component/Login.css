@@ -7,12 +7,11 @@
   }
   
   body {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100vh;
-    /* background-color: #fff; */
-    background: red;
+    background-color: #fff;
   }
   
   .wrapper {
@@ -32,6 +31,7 @@
   .insta-logo img {
     width: 80px;
     margin-bottom: 70px;
+    margin-top: 40px;
   }
   
   .input-field {
@@ -98,3 +98,13 @@
     bottom: 10px;
   }
   
+  .loading-cls{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .loading-cls p{
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+  }

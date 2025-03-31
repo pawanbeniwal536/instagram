@@ -4,18 +4,17 @@ import "./Login.css";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password , setPassword] = useState("");
-
+  const [loading , setLoading] = useState(false);
   const handleSubmit = async(e) => {
+    e.preventDefault();
     if (username.length == "" || password.length == "") {
       alert("Creadential cannot be blank");
     }
     else{
-      e.preventDefault();
-      
+
       try {
-    
-      
-    const response = await fetch("https://instagram-ft4y.onrender.com/api/signUp",
+      setLoading(true);
+      const response = await fetch("https://instagram-ft4y.onrender.com/api/signUp",
       {
         method:"POST",
         headers: {
@@ -37,11 +36,21 @@ const Login = () => {
   catch (error) {
     console.error("Network error:", error);
   }
-  alert("Invalid username and password");
+  finally{
+    setLoading(false);
+    alert("Invalid username and password !");
+    setUsername("");
+    setPassword("");
+  }
 }
   }
 
   return (
+
+
+    <>
+    {
+      loading?(<div className="loading-cls"><p>Loading...</p></div>):(
     <div className="wrapper">
       <div className="container">
         <div className="insta-logo">
@@ -68,7 +77,9 @@ const Login = () => {
       </div>
 
       <p className="meta">Meta</p>
-    </div>
+    </div>)
+}
+    </>
   );
 };
 
